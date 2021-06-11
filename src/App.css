@@ -1,38 +1,240 @@
-.App {
-  text-align: center;
+/* Styles Import */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Genral */
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color:black;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Home Page */
+.homeContainer{
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.homeImage{
+    width: 100%;
+    border-radius: 20px;
+}
+.homeContent{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.homeDetail{
+    text-align: justify;
+    text-justify: inter-word;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Launches Page */
+.launchesContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.launchesGrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lgCard {
+    margin: 2% 2% !important;
+    justify-content: center;
+    align-items: center;
+}
+.launchesCard{
+    background: linear-gradient(45deg, #e2e3eead 30%, #798a6f8a 90%);
+}
+.lgSucceeded {
+    border-bottom: 10px solid rgb(32, 180, 32);
+}
+.lgFailed {
+    border-bottom: 10px solid rgb(192, 37, 37);
+}
+.lgUpComming {
+    border-bottom: 10px solid rgb(28, 48, 138);
+}
+.launchesImage{
+    width: 100%;
+    align-self: center;
+    border-radius: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* ErrorPage */
+.errorPage {
+    color: white;
+    margin: auto;
+    height: 75vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.err404 {
+    color: #ffffff;
+    font-size: 8rem;
+}
+.errorMsg {
+    text-align: center;
+    font-size: 1.2rem;
+    left: 16%;
+    top: 45%;
+    width: 75%;
+}
+.errorMsg strong{
+    color: green;
+} 
+
+/* Loader */
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.loader:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: loader 1.2s infinite;
+}
+@keyframes loader {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
 }
 
-.App-link {
-  color: #61dafb;
+/* Launches */
+.launchesList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+}
+.slLoading{
+    color: white;
+    text-align: center;
+}
+h3{
+    color: white;
+}
+.slCard{
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.slCardText{
+    color: white;
+}
+.cardDetails{
+    margin-top: 10px;
+}
+.detailsButton{
+    background: linear-gradient(45deg, #6b75fe8c 30%, #535eff8a 90%);  
+    width: 100%;
+}
+.cardImage{
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    border-radius: 20px;
+}
+.imageDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Launch Page */
+.launchPage{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 98%;
+    color: white;
 }
+.launchLogo{
+    height: 150px;
+    width: 150px;
+}
+.tableDiv{
+    border: 3px solid white;
+}
+th, td{
+    border: 1px solid white;
+}
+td{
+    padding: 10px;
+}
+.green{
+    color: rgb(32, 180, 32);
+}
+.red{
+    color: rgb(192, 37, 37);
+}
+.yellow{
+    color: rgb(28, 48, 138);
+}
+.productsGridContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.productsGrid {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 0pt;
+}
+@media(max-width: 960px){
+    .productsContainer{
+        margin-top: 100px;
+    }
+}
+@media(max-width: 960px){
+    .productsContainer{
+        margin-top: 100px;
+    }
+}
+
+/* Links */
+.link{
+    color: white;
+    text-decoration: none;
+}
+.buttonLink{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+} 
